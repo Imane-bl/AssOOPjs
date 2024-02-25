@@ -1,14 +1,32 @@
 // Edit The Class
 class User {
     #c
-    #u
+    
     constructor(username, card) {
       this.u = username;
       this.#c = card;
-      this.showData=function(){
-       return `Hello${this.u}Your Credit Card Number Is${this.c}` 
-      }
     }
+
+      get showData(){
+     return `Hello${this.u}Your Credit Card Number Is ${this.Cardcridit()}` 
+    }
+
+    Cardcridit(){
+        return this.#c.toString().match( /\d{4}/ig).join("-");
+    }
+    
+    /*
+    getcard(){
+        return this.#c
+    }
+
+    get c(){
+     return this.#c
+    }
+    set c(newSalary) {
+        this.#c = newSalary;
+      }*/
+
   }
   
   // Do Not Edit Anything Below
